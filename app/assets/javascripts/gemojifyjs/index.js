@@ -1,1 +1,1 @@
-//= require emojify.min.js
+//= require ./emojify.min.js
