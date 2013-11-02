@@ -1,1 +1,2 @@
-//= require ./emojify.js
+//= require ./emojify
+//= require ./stevemojify.js.coffee
