@@ -1,6 +1,6 @@
 class Emojify
   constructor: ->
-    @normal_tags = /:\w+:/g
+    @normal_tags = /:[-\w]+:/g
     @smileys = [
             [/:-*\)/g, 'blush'],
             [/:-*o/gi, 'scream'],
