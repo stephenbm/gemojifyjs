@@ -29,7 +29,8 @@ class Emojify
       markup = match.substring(1, match.length-1)
       text = text.replace(match, "<span class='emojify #{markup.toLowerCase()}' title='#{markup}'></span>")
     for smiley in @smileys
-      text = text.replace(smiley[0], "<span class='emojify #{smiley[1]}' title='#{smiley[0]}'></span>")
+      for match in text.match(smiley[0]) or []
+        text = text.replace(match, "<span class='emojify #{smiley[1]}' title='#{match}'></span>")
     return text
 
 window.emojify = new Emojify
