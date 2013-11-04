@@ -10,7 +10,7 @@ class Emojify
             [/:-*p/gi, 'stuck_out_tongue_winking_eye'],
             [/:-*(\[|@)/g, 'rage'],
             [/:-*\(/g, 'disappointed'],
-            [/:('|’)-*\(/g, 'emojify sob'],
+            [/:('|’)-*\(/g, 'sob'],
             [/:-*\*/g, 'kissing_heart'],
             [/;-*\)/g, 'wink'],
             [/:-*\//g, 'pensive'],
@@ -27,8 +27,8 @@ class Emojify
 
   markup: (text) ->
     for match in text.match(@normal_tags) or []
-      if match in @valid_tags
-        markup = match.substring(1, match.length-1)
+      markup = match.substring(1, match.length-1)
+      if markup in @valid_tags
         text = text.replace(match, "<span class='emojify #{markup.toLowerCase()}' title='#{markup}'></span>")
     for smiley in @smileys
       for match in text.match(smiley[0]) or []
