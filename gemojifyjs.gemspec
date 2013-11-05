@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Gemojifyjs::VERSION
   spec.authors       = ["Stephen Breyer-Menke"]
   spec.email         = ["steve.bm@gmail.com"]
-  spec.description   = %q{Gem for emojify.js}
-  spec.summary       = %q{Gem for emojify.js}
+  spec.description   = %q{A simple jaavscript emoji that marks up test with emojis}
+  spec.summary       = %q{Javascript emoji library}
   spec.homepage      = ""
   spec.license       = "MIT"
 
